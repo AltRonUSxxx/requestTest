@@ -17,13 +17,13 @@ namespace server
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Status()
         {
-            this.requests = new HashSet<request>();
+            this.Requests = new HashSet<Requests>();
         }
     
         public int Id { get; set; }
         public string name { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<request> requests { get; set; }
+        public virtual ICollection<Requests> Requests { get; set; }
     }
 }

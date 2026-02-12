@@ -12,21 +12,21 @@ namespace server
     using System;
     using System.Collections.Generic;
     
-    public partial class User
+    public partial class Users
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public User()
+        public Users()
         {
-            this.requests = new HashSet<request>();
+            this.Requests = new HashSet<Requests>();
         }
     
-        public int id { get; set; }
+        public int Id { get; set; }
         public string username { get; set; }
-        public string hashed_password { get; set; }
-        public int security_lvl { get; set; }
+        public string hash_password { get; set; }
+        public Nullable<int> lvl_security { get; set; }
         public string email { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<request> requests { get; set; }
+        public virtual ICollection<Requests> Requests { get; set; }
     }
 }

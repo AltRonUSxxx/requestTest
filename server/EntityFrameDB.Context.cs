@@ -13,10 +13,10 @@ namespace server
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class requestTestEntities : DbContext
+    public partial class TaskManagerEntities : DbContext
     {
-        public requestTestEntities()
-            : base("name=requestTestEntities")
+        public TaskManagerEntities()
+            : base("name=TaskManagerEntities")
         {
         }
     
@@ -25,8 +25,8 @@ namespace server
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<request> requests { get; set; }
+        public virtual DbSet<Requests> Requests { get; set; }
         public virtual DbSet<Status> Status { get; set; }
-        public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<Users> Users { get; set; }
     }
 }

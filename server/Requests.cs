@@ -12,15 +12,15 @@ namespace server
     using System;
     using System.Collections.Generic;
     
-    public partial class request
+    public partial class Requests
     {
         public int Id { get; set; }
-        public int user_Id { get; set; }
+        public int user_id { get; set; }
         public System.DateTime date_start { get; set; }
-        public string description { get; set; }
-        public int status_Id { get; set; }
+        public string descriprion { get; set; }
+        public int statud_id { get; set; }
     
         public virtual Status Status { get; set; }
-        public virtual User User { get; set; }
+        public virtual Users Users { get; set; }
     }
 }
