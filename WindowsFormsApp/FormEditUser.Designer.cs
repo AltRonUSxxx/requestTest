@@ -72,6 +72,7 @@
             this.Controls.Add(this.dataGridView_main);
             this.Name = "FormEditUser";
             this.Text = "FormEditUser";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormEditUser_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_main)).EndInit();
             this.ResumeLayout(false);
 

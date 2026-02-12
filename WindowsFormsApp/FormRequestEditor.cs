@@ -16,5 +16,11 @@ namespace WindowsFormsApp
         {
             InitializeComponent();
         }
+
+        private void FormRequestEditor_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Environment.Exit(0);
+
+        }
     }
 }

@@ -93,6 +93,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FormRequestEditor";
             this.Text = "Edit";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormRequestEditor_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
