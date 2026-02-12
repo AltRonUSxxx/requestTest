@@ -22,6 +22,7 @@ namespace server
             while(true)
             {
                 TcpClient client = listener.AcceptTcpClient();
+                Console.WriteLine("New client");
                 Task.Run(() => HandleClient(client));
             }
         }
@@ -37,6 +38,7 @@ namespace server
                     while (true)
                     {
                         string request = reader.ReadLine();
+                        Console.WriteLine($"READ: {request}");
                         if(request == null)
                         {
                             Console.WriteLine("Client disconnected");
@@ -45,7 +47,8 @@ namespace server
                         if (request.StartsWith("LOGIN"))
                         {
                             string[] arguments = request.Split('|');
-                            string result = AuthService.
+                            string result = AuthService.login(arguments[1], arguments[2]);
+                            writer.WriteLine(result);
                         }
                     }
                 }
@@ -53,6 +56,10 @@ namespace server
             catch (Exception ex)
             {
                 Console.WriteLine(ex.ToString()); 
+            }
+            finally
+            {
+                client.Close();
             }
         }
     }
