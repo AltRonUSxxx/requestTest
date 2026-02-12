@@ -1,5 +1,19 @@
+# Visual Studio
+.vs/
 bin/
 obj/
+
+# User-specific files
 *.user
 *.suo
-.vs/
+
+# Database files
+*.mdf
+*.ldf
+
+# Configs with secrets
+App.config.local
+appsettings.json
+
+# EF cache (если появится)
+*.edmx.diagram
