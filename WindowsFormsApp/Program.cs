@@ -13,10 +13,10 @@ namespace WindowsFormsApp
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
-        static void Main()
+        static async Task Main()
         {
             client = new ServerConnection();
-            client.Connect();
+            await client.ConnectAsync();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FormLogin());

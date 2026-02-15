@@ -19,8 +19,11 @@ namespace WindowsFormsApp
 
         private void FormMain_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Environment.Exit(0);
-            Program.client.Close();
+        }
+
+        private void button_logOut_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

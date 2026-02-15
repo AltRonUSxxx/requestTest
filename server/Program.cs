@@ -23,11 +23,12 @@ namespace server
             {
                 TcpClient client = listener.AcceptTcpClient();
                 Console.WriteLine("New client");
-                Task.Run(() => HandleClient(client));
+                //Task.Run(() => HandleClient(client));
+                _ = HandleClientAsync(client);
             }
         }
 
-        private static void HandleClient(TcpClient client)
+        static async Task HandleClientAsync(TcpClient client)
         {
             try
             {
@@ -37,7 +38,7 @@ namespace server
                 {
                     while (true)
                     {
-                        string request = reader.ReadLine();
+                        string request = await reader.ReadLineAsync();
                         Console.WriteLine($"READ: {request}");
                         if(request == null)
                         {
@@ -47,8 +48,8 @@ namespace server
                         if (request.StartsWith("LOGIN"))
                         {
                             string[] arguments = request.Split('|');
-                            string result = AuthService.login(arguments[1], arguments[2]);
-                            writer.WriteLine(result);
+                            string result = await AuthService.loginAsync(arguments[1], arguments[2]);
+                            await writer.WriteLineAsync(result);
                         }
                     }
                 }

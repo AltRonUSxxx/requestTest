@@ -20,7 +20,7 @@ namespace WindowsFormsApp
             InitializeComponent();
         }
 
-        private void button_login_Click(object sender, EventArgs e)
+        private async void button_login_Click(object sender, EventArgs e)
         {
             string username = textBox_username.Text;
             string password = textBox_password.Text;
@@ -40,18 +40,22 @@ namespace WindowsFormsApp
                     return;
                 }
             }
-            string answer = Program.client.Send($"LOGIN|{username}|{password}");
-            MessageBox.Show(answer);
-            if (!answer.Contains("SUCCESS"))
+            string answer = await Program.client.SendAsync($"LOGIN|{username}|{password}");
+            if (answer.Contains("SUCCESS"))
             {
                 FormMain formMain = new FormMain();
+                formMain.FormClosing += (s, args) =>
+                {
+                    this.Show();
+                    textBox_password.Text = "";
+                };
                 formMain.Show();
                 this.Hide();
                 return;
             }
             else
             {
-                MessageBox.Show("Workds");
+                MessageBox.Show("Wrong login or password");
             }
         }
 
