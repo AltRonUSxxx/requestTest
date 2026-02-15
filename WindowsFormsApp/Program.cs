@@ -16,7 +16,7 @@ namespace WindowsFormsApp
         static void Main()
         {
             client = new ServerConnection();
-            client.connect();
+            client.Connect();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FormLogin());

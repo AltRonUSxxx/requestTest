@@ -40,8 +40,8 @@ namespace WindowsFormsApp
                     return;
                 }
             }
-            MessageBox.Show("DS");
-            string answer = Program.client.send($"LOGIN|{username}|{password}");
+            string answer = Program.client.Send($"LOGIN|{username}|{password}");
+            MessageBox.Show(answer);
             if (!answer.Equals("SUCCESS"))
             {
                 MessageBox.Show(answer);
@@ -56,6 +56,10 @@ namespace WindowsFormsApp
         private void FormLogin_FormClosing(object sender, FormClosingEventArgs e)
         {
             Program.client.Close();
+        }
+
+        private void FormLogin_Load(object sender, EventArgs e)
+        {
         }
     }
 }
