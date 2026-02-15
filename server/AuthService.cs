@@ -27,6 +27,31 @@ namespace server
             }
         }
 
+        public static async Task<string> registerAsync(string username, string password, string email)
+        {
+            using(var db = new TaskManagerEntities())
+            {
+                var user = db.Users.FirstOrDefault(x => x.username == username);
+                if (!(user is null))
+                {
+                    return "USERNAME ALREDY HAVE";
+                }
+                var emailCheck = db.Users.FirstOrDefault(x => x.email == email);
+                if (!(emailCheck is null))
+                {
+                    return "EMAIL ALREDY HAVE";
+                }
+                user = new Users();
+                user.username = username;
+                user.hash_password = passwordHasher.hashPassword(password);
+                user.email = email;
+                db.Users.Add(user);
+                db.SaveChanges();
+                Console.WriteLine("New account");
+                return "SUCCESS";
+            }
+        }
+
         public static string login(string username, string password)
         {
             using (var db = new TaskManagerEntities())

@@ -60,6 +60,7 @@
             this.button_register.TabIndex = 10;
             this.button_register.Text = "Register";
             this.button_register.UseVisualStyleBackColor = true;
+            this.button_register.Click += new System.EventHandler(this.button_register_Click);
             // 
             // label2
             // 
@@ -151,7 +152,6 @@
             this.Name = "FormRegister";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormRegister";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormRegister_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

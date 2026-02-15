@@ -39,6 +39,7 @@ namespace server
                     while (true)
                     {
                         string request = await reader.ReadLineAsync();
+                        string[] arguments = request.Split('|');
                         Console.WriteLine($"READ: {request}");
                         if(request == null)
                         {
@@ -47,8 +48,12 @@ namespace server
                         }
                         if (request.StartsWith("LOGIN"))
                         {
-                            string[] arguments = request.Split('|');
                             string result = await AuthService.loginAsync(arguments[1], arguments[2]);
+                            await writer.WriteLineAsync(result);
+                        }
+                        else if(request.StartsWith("REG"))
+                        {
+                            string result = await AuthService.registerAsync(arguments[1], arguments[2], arguments[3]);
                             await writer.WriteLineAsync(result);
                         }
                     }

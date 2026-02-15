@@ -71,6 +71,10 @@ namespace WindowsFormsApp
         private void linkLabel_registration_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             FormRegister registration = new FormRegister();
+            registration.FormClosing += (s, args) =>
+            {
+                this.Show();
+            };
             registration.Show();
             this.Hide();
         }
