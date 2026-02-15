@@ -11,7 +11,7 @@ namespace server
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
             TcpListener listener = new TcpListener(IPAddress.Parse("127.0.0.1"), 2912);
             listener.Start();

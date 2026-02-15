@@ -108,6 +108,7 @@
             this.Controls.Add(this.button_checkRequestStatus);
             this.Controls.Add(this.button_makeRequest);
             this.Name = "FormMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormMain_FormClosing);
             this.ResumeLayout(false);

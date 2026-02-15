@@ -49,6 +49,7 @@
             this.linkLabel_cancel.TabIndex = 11;
             this.linkLabel_cancel.TabStop = true;
             this.linkLabel_cancel.Text = "cancel";
+            this.linkLabel_cancel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_cancel_LinkClicked);
             // 
             // button_register
             // 
@@ -148,6 +149,7 @@
             this.Controls.Add(this.textBox_password1);
             this.Controls.Add(this.textBox_username);
             this.Name = "FormRegister";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormRegister";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormRegister_FormClosing);
             this.ResumeLayout(false);

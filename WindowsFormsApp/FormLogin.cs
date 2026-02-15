@@ -42,9 +42,11 @@ namespace WindowsFormsApp
             }
             string answer = Program.client.Send($"LOGIN|{username}|{password}");
             MessageBox.Show(answer);
-            if (!answer.Equals("SUCCESS"))
+            if (!answer.Contains("SUCCESS"))
             {
-                MessageBox.Show(answer);
+                FormMain formMain = new FormMain();
+                formMain.Show();
+                this.Hide();
                 return;
             }
             else
@@ -60,6 +62,13 @@ namespace WindowsFormsApp
 
         private void FormLogin_Load(object sender, EventArgs e)
         {
+        }
+
+        private void linkLabel_registration_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            FormRegister registration = new FormRegister();
+            registration.Show();
+            this.Hide();
         }
     }
 }

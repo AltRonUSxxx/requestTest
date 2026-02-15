@@ -89,6 +89,7 @@
             this.linkLabel_registration.TabIndex = 5;
             this.linkLabel_registration.TabStop = true;
             this.linkLabel_registration.Text = "Don\'t have acount?";
+            this.linkLabel_registration.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_registration_LinkClicked);
             // 
             // FormLogin
             // 
