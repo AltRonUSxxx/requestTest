@@ -68,13 +68,9 @@ namespace WindowsFormsApp
             }
             string request = $"REG|{username}|{password1}|{email}";
             string answer = await Program.client.SendAsync(request);
-            if (!answer.Contains("SUCCESS"))
+            MessageBox.Show(answer);
+            if (answer.Contains("SUCCESS"))
             {
-                MessageBox.Show(answer);
-            }
-            else
-            {
-                MessageBox.Show("УСПЕШНО!");
                 this.Close();
             }
         }
