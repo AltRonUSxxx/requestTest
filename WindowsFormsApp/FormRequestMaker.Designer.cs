@@ -63,6 +63,7 @@
             this.button1.TabIndex = 2;
             this.button1.Text = "cancel";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox_title
             // 
@@ -104,6 +105,7 @@
             this.Controls.Add(this.button_send);
             this.Controls.Add(this.richTextBox_mainText);
             this.Name = "FormRequestMaker";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormRequestMaker";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormRequestMaker_FormClosing);
             this.ResumeLayout(false);

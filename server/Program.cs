@@ -39,13 +39,13 @@ namespace server
                     while (true)
                     {
                         string request = await reader.ReadLineAsync();
-                        string[] arguments = request.Split('|');
-                        Console.WriteLine($"READ: {request}");
-                        if(request == null)
+                        if(request is null)
                         {
                             Console.WriteLine("Client disconnected");
                             break;
                         }
+                        Console.WriteLine($"READ: {request}");
+                        string[] arguments = request.Split('|');
                         if (request.StartsWith("LOGIN"))
                         {
                             string result = await AuthService.loginAsync(arguments[1], arguments[2]);

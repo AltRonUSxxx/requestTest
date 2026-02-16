@@ -74,7 +74,8 @@ namespace WindowsFormsApp
             }
             else
             {
-
+                MessageBox.Show("УСПЕШНО!");
+                this.Close();
             }
         }
     }

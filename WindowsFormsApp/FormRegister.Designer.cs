@@ -46,7 +46,7 @@
             this.linkLabel_cancel.Location = new System.Drawing.Point(191, 356);
             this.linkLabel_cancel.Name = "linkLabel_cancel";
             this.linkLabel_cancel.Size = new System.Drawing.Size(39, 13);
-            this.linkLabel_cancel.TabIndex = 11;
+            this.linkLabel_cancel.TabIndex = 6;
             this.linkLabel_cancel.TabStop = true;
             this.linkLabel_cancel.Text = "cancel";
             this.linkLabel_cancel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_cancel_LinkClicked);
@@ -57,7 +57,7 @@
             this.button_register.Location = new System.Drawing.Point(170, 265);
             this.button_register.Name = "button_register";
             this.button_register.Size = new System.Drawing.Size(132, 51);
-            this.button_register.TabIndex = 10;
+            this.button_register.TabIndex = 5;
             this.button_register.Text = "Register";
             this.button_register.UseVisualStyleBackColor = true;
             this.button_register.Click += new System.EventHandler(this.button_register_Click);
@@ -88,7 +88,7 @@
             this.textBox_password1.Location = new System.Drawing.Point(97, 86);
             this.textBox_password1.Name = "textBox_password1";
             this.textBox_password1.Size = new System.Drawing.Size(298, 37);
-            this.textBox_password1.TabIndex = 7;
+            this.textBox_password1.TabIndex = 2;
             // 
             // textBox_username
             // 
@@ -96,7 +96,7 @@
             this.textBox_username.Location = new System.Drawing.Point(97, 28);
             this.textBox_username.Name = "textBox_username";
             this.textBox_username.Size = new System.Drawing.Size(298, 37);
-            this.textBox_username.TabIndex = 6;
+            this.textBox_username.TabIndex = 1;
             // 
             // label3
             // 
@@ -114,7 +114,7 @@
             this.textBox_password2.Location = new System.Drawing.Point(97, 139);
             this.textBox_password2.Name = "textBox_password2";
             this.textBox_password2.Size = new System.Drawing.Size(298, 37);
-            this.textBox_password2.TabIndex = 12;
+            this.textBox_password2.TabIndex = 3;
             // 
             // label4
             // 
@@ -132,7 +132,7 @@
             this.textBox_email.Location = new System.Drawing.Point(97, 189);
             this.textBox_email.Name = "textBox_email";
             this.textBox_email.Size = new System.Drawing.Size(298, 37);
-            this.textBox_email.TabIndex = 14;
+            this.textBox_email.TabIndex = 4;
             // 
             // FormRegister
             // 

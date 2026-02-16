@@ -19,7 +19,11 @@ namespace WindowsFormsApp
 
         private void FormAllRequests_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Environment.Exit(0);
+        }
+
+        private void button_cancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

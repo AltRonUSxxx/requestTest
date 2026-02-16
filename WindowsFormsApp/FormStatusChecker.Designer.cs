@@ -43,6 +43,7 @@
             this.button_cancel.TabIndex = 0;
             this.button_cancel.Text = "Cancel";
             this.button_cancel.UseVisualStyleBackColor = true;
+            this.button_cancel.Click += new System.EventHandler(this.button_cancel_Click);
             // 
             // button1
             // 
@@ -82,6 +83,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button_cancel);
             this.Name = "FormStatusChecker";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Checker";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormStatusChecker_FormClosing);
             this.ResumeLayout(false);

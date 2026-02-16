@@ -44,9 +44,9 @@ namespace server
                 user = new Users();
                 user.username = username;
                 user.hash_password = passwordHasher.hashPassword(password);
-                user.email = email;
+                user.email = email.ToLower();
                 db.Users.Add(user);
-                db.SaveChanges();
+                await db.SaveChangesAsync();
                 Console.WriteLine("New account");
                 return "SUCCESS";
             }

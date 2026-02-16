@@ -45,6 +45,7 @@
             this.button_makeRequest.TabIndex = 0;
             this.button_makeRequest.Text = "make request";
             this.button_makeRequest.UseVisualStyleBackColor = true;
+            this.button_makeRequest.Click += new System.EventHandler(this.button_makeRequest_Click);
             // 
             // button_checkRequestStatus
             // 
@@ -55,6 +56,7 @@
             this.button_checkRequestStatus.TabIndex = 1;
             this.button_checkRequestStatus.Text = "check request status";
             this.button_checkRequestStatus.UseVisualStyleBackColor = true;
+            this.button_checkRequestStatus.Click += new System.EventHandler(this.button_checkRequestStatus_Click);
             // 
             // button_checkAllRequests
             // 
@@ -65,6 +67,7 @@
             this.button_checkAllRequests.TabIndex = 2;
             this.button_checkAllRequests.Text = "check all requests";
             this.button_checkAllRequests.UseVisualStyleBackColor = true;
+            this.button_checkAllRequests.Click += new System.EventHandler(this.button_checkAllRequests_Click);
             // 
             // button_editRequest
             // 
@@ -75,6 +78,7 @@
             this.button_editRequest.TabIndex = 3;
             this.button_editRequest.Text = "edit request";
             this.button_editRequest.UseVisualStyleBackColor = true;
+            this.button_editRequest.Click += new System.EventHandler(this.button_editRequest_Click);
             // 
             // button_editUser
             // 
@@ -85,6 +89,7 @@
             this.button_editUser.TabIndex = 4;
             this.button_editUser.Text = "edit user";
             this.button_editUser.UseVisualStyleBackColor = true;
+            this.button_editUser.Click += new System.EventHandler(this.button_editUser_Click);
             // 
             // button_logOut
             // 

@@ -80,6 +80,7 @@
             this.button_cancel.TabIndex = 4;
             this.button_cancel.Text = "cancel";
             this.button_cancel.UseVisualStyleBackColor = true;
+            this.button_cancel.Click += new System.EventHandler(this.button_cancel_Click);
             // 
             // FormRequestEditor
             // 
@@ -92,6 +93,7 @@
             this.Controls.Add(this.textBox_requestNumber);
             this.Controls.Add(this.label1);
             this.Name = "FormRequestEditor";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Edit";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormRequestEditor_FormClosing);
             this.ResumeLayout(false);

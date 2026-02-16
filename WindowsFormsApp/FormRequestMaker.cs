@@ -19,8 +19,12 @@ namespace WindowsFormsApp
 
         private void FormRequestMaker_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Environment.Exit(0);
+            
+        }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

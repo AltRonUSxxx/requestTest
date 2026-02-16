@@ -50,6 +50,7 @@
             this.button_cancel.TabIndex = 1;
             this.button_cancel.Text = "cancel";
             this.button_cancel.UseVisualStyleBackColor = true;
+            this.button_cancel.Click += new System.EventHandler(this.button_cancel_Click);
             // 
             // FormAllRequests
             // 
@@ -59,6 +60,7 @@
             this.Controls.Add(this.button_cancel);
             this.Controls.Add(this.dataGridView1);
             this.Name = "FormAllRequests";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormAllRequests";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormAllRequests_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

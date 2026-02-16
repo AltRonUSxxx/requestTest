@@ -61,6 +61,7 @@
             this.button_cancel.TabIndex = 2;
             this.button_cancel.Text = "cancel";
             this.button_cancel.UseVisualStyleBackColor = true;
+            this.button_cancel.Click += new System.EventHandler(this.button_cancel_Click);
             // 
             // FormEditUser
             // 
@@ -71,6 +72,7 @@
             this.Controls.Add(this.button_send);
             this.Controls.Add(this.dataGridView_main);
             this.Name = "FormEditUser";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormEditUser";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormEditUser_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_main)).EndInit();

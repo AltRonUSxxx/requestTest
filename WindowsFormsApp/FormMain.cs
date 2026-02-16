@@ -25,5 +25,60 @@ namespace WindowsFormsApp
         {
             this.Close();
         }
+
+        private void button_makeRequest_Click(object sender, EventArgs e)
+        {
+            FormRequestMaker formRequestMaker = new FormRequestMaker();
+            formRequestMaker.FormClosing += (s, args) =>
+            {
+                this.Show();
+            };
+            formRequestMaker.Show();
+            this.Hide();
+        }
+
+        private void button_checkRequestStatus_Click(object sender, EventArgs e)
+        {
+            FormStatusChecker formStatusChecker = new FormStatusChecker();
+            formStatusChecker.FormClosing += (s, args) =>
+            {
+                this.Show();
+            };
+            formStatusChecker.Show();
+            this.Hide();
+        }
+
+        private void button_checkAllRequests_Click(object sender, EventArgs e)
+        {
+            FormAllRequests formAllRequests = new FormAllRequests();
+            formAllRequests.FormClosing += (s, args) =>
+            {
+                this.Show();
+            };
+            formAllRequests.Show();
+            this.Hide();
+        }
+
+        private void button_editRequest_Click(object sender, EventArgs e)
+        {
+            FormRequestEditor formRequestEditor = new FormRequestEditor();
+            formRequestEditor.FormClosing += (s, args) =>
+            {
+                this.Show();
+            };
+            formRequestEditor.Show();
+            this.Hide();
+        }
+
+        private void button_editUser_Click(object sender, EventArgs e)
+        {
+            FormEditUser formEditUser = new FormEditUser();
+            formEditUser.FormClosing += (s, args) =>
+            {
+                this.Show();
+            };
+            formEditUser.Show();
+            this.Hide();
+        }
     }
 }
