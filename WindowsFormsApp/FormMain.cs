@@ -12,6 +12,18 @@ namespace WindowsFormsApp
 {
     public partial class FormMain : Form
     {
+        private string security_LVL;
+        public FormMain(string security_levelOUT)
+        {
+            InitializeComponent();
+            security_LVL = security_levelOUT;
+            button_makeRequest.Hide();
+            button_checkRequestStatus.Hide();
+            button_checkAllRequests.Hide();
+            button_editRequest.Hide();
+            button_editUser.Hide();
+        }
+
         public FormMain()
         {
             InitializeComponent();
@@ -79,6 +91,11 @@ namespace WindowsFormsApp
             };
             formEditUser.Show();
             this.Hide();
+        }
+
+        private void FormMain_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

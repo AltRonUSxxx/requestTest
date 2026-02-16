@@ -65,7 +65,7 @@ namespace server
 
                 if(passwordHasher.verifyPassword(password, user.hash_password))
                 {
-                    return "SUCCESS";
+                    return $"SUCCESS|{user.lvl_security}";
                 }
                 return "WRONG_PASSWORD";
             }

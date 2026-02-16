@@ -20,6 +20,7 @@ namespace WindowsFormsApp
             InitializeComponent();
         }
 
+
         private async void button_login_Click(object sender, EventArgs e)
         {
             string username = textBox_username.Text;
@@ -43,7 +44,7 @@ namespace WindowsFormsApp
             string answer = await Program.client.SendAsync($"LOGIN|{username}|{password}");
             if (answer.Contains("SUCCESS"))
             {
-                FormMain formMain = new FormMain();
+                FormMain formMain = new FormMain(answer.Split('|')[1]);
                 formMain.FormClosing += (s, args) =>
                 {
                     this.Show();
@@ -78,5 +79,6 @@ namespace WindowsFormsApp
             registration.Show();
             this.Hide();
         }
+
     }
 }
